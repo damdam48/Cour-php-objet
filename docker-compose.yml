@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+    web:
+        build: Docker
+        restart: on-failure
+        volumes:
+            - ./app:/app:rw
+        ports:
+            - 8010:80
+
+volumes:
+    db-data: null
